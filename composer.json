@@ -1,5 +1,5 @@
 {
-    "name": "yh/gm",
+    "name": "wv/gm-yh",
     "description": "银海医保系统SM2签名SM4加密解密",
     "type": "library",
     "license": "Apache-2.0",
@@ -17,7 +17,7 @@
     "require": {
         "php": ">=8.1.0",
         "ext-gmp": "*",
-        "ext-openssl": "*"
+        "ext-openssl": ">=1.1.1"
     },
     "suggest": {
         "ext-gmssl": "*"
