@@ -1,0 +1,33 @@
+<?php
+
+require_once  __DIR__ . '/../vendor/autoload.php';
+
+$prvKey = 'APvZtjhysKTpdjZ0WmnLYDl/heobjC41C9/CP7k+GGY3';
+$platformPubKey = 'BNHKza0nKVmi6L4fKm0+/lXux32fo+4X1d630sIeJLmen1BHr/DMntMm29ICNdYkGPT/i4dOT8P6eaUV4MR55zs=';
+$message = 'a';
+
+
+var_dump(GMSSL_PHP_VERSION,
+GMSSL_LIBRARY_VERSION,
+GMSSL_SM3_DIGEST_SIZE,
+GMSSL_SM3_HMAC_SIZE,
+GMSSL_SM3_HMAC_MIN_KEY_SIZE,
+GMSSL_SM4_KEY_SIZE,
+GMSSL_SM4_BLOCK_SIZE,
+GMSSL_SM4_CBC_IV_SIZE,
+GMSSL_SM4_CTR_IV_SIZE,
+GMSSL_SM4_GCM_MIN_IV_SIZE,
+GMSSL_SM4_GCM_MAX_IV_SIZE,
+GMSSL_SM4_GCM_DEFAULT_IV_SIZE,
+GMSSL_SM4_GCM_MAX_TAG_SIZE,
+GMSSL_SM2_DEFAULT_ID,
+GMSSL_SM2_MAX_PLAINTEXT_SIZE,
+GMSSL_SM9_MAX_PLAINTEXT_SIZE,
+GMSSL_ZUC_KEY_SIZE,
+GMSSL_ZUC_IV_SIZE);die();
+$sign = \Gm\Helper\SM2::sign($message, $prvKey, '1234567812345678');
+
+var_dump($sign);
+
+$isV = \Gm\Helper\SM2::verify($message, $sign, $platformPubKey, '1234567812345678');
+var_dump($isV);
