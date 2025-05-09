@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection PhpInconsistentReturnPointsInspection */
 /**
  * GmSSL PHP Extension
  * @link https://github.com/GmSSL/GmSSL-PHP
@@ -130,7 +130,6 @@ function gmssl_sm4_ctr_encrypt(string $key, string $iv, string $data): string {}
  * @param string $data The input plaintext.
  * @return string The encrypted ciphertext.
  */
-#[Pure]
 function gmssl_sm4_gcm_encrypt(string $key, string $iv, string $aad, int $taglen, string $data): string {} {}
 
 /**
